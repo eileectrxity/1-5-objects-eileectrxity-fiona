@@ -33,9 +33,19 @@ const coolGreeting = (person) => {
 // console.log(coolGreeting(coolPerson)) //"What is UP SARA? How you been doin'?"
 // console.log(coolGreeting(notCoolPerson)) //'Greetings Bob, how have you been lately?'
 
-const haveBirthday = () => {
+const haveBirthday = (person) => { // We are creating the function 
+  const { name, age } = person //definding the parameter person as an object with key variables called name and age
+  person.age = age + 1 //increasing the age key value by 1
 };
 
+/*
+  const age1 = 30;
+  const age2 = 0;
+  const age3 = 100;
+  const person1 = { name: 'Sara', age: age1 };
+  const person2 = { name: 'Bob', age: age2 };
+  const person3 = { name: 'Jo', age: age3 };
+*/
 const becomeSecretAgent = () => {
 };
 
