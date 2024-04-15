@@ -202,8 +202,41 @@ const listAllValues = (obj) => {
   return Object.values(obj);
 };
 
-const convertToMatrix = () => {
+// Question 10
+/* Test case :
+let users = [
+  {
+    name: 'Sara',
+    age: 30,
+    bio: 'What a legend',
+  },
+  {
+    name: 'Bob',
+    age: 30,
+    bio: "Kind of mean if we're being honest",
+  },
+
+];
+*/
+
+const convertToMatrix = (newprofile) => {
+  if (newprofile === null || newprofile.length === 0 || newprofile.length === undefined) {
+    return newprofile
+  } else {
+    let arr = []
+    arr.push(Object.keys(newprofile[0]));
+
+    for (let profile of newprofile) {
+      // console.log(profile)
+    arr.push(Object.values(profile));
+
+    } 
+    // console.log(arr)
+    return arr
+
+  }    
 };
+// console.log(convertToMatrix(users))
 
 module.exports = {
   coolGreeting,
