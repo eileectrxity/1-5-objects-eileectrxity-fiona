@@ -78,8 +78,19 @@ const becomeSecretAgent = (person, spyHandle) => {
 // becomeSecretAgent(person2, '008');
 // console.log(person2); //{ spyHandle: '008', age: 30 }
 
-const carMaker = () => {
+const carMaker = (name, maker, year) => { 
+  return {
+    name : name,
+    maker : maker,
+    year : year,
+    needsOilChange : false
+  }
 };
+// console.log(carMaker('Civic', "Honda", 2005))
+
+/* Results printed :
+{ name: 'Civic', maker: 'Honda', year: 2005, needsOilChange: false }
+*/
 
 const weAreNotFriends = () => {
 };
