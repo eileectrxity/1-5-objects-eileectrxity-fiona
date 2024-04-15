@@ -197,7 +197,9 @@ return Object.keys(object1);
 
 console.log(listAllKeys(keys));
 
-const listAllValues = () => {
+//Question 9: a function that takes in an object. function should return an array of all the values on that object. you can do this a few ways, but just like the above there's a method just for this. look it up!
+const listAllValues = (obj) => {
+  return Object.values(obj);
 };
 
 const convertToMatrix = () => {
