@@ -78,6 +78,7 @@ const becomeSecretAgent = (person, spyHandle) => {
 // becomeSecretAgent(person2, '008');
 // console.log(person2); //{ spyHandle: '008', age: 30 }
 
+//Question 4
 const carMaker = (name, maker, year) => { 
   return {
     name : name,
@@ -92,8 +93,31 @@ const carMaker = (name, maker, year) => {
 { name: 'Civic', maker: 'Honda', year: 2005, needsOilChange: false }
 */
 
-const weAreNotFriends = () => {
+//Question 5: a function that takes in a single person object. function should permanently remove the last name from the person.friends array (an array of strings), and return this value
+const weAreNotFriends = (person) => {
+  // const { name, age, friends } = person; //don't need this because it's referencing the keys from the from-scratch.spec.js
+  return person.friends.pop();
+  // return person.friends.splice(person.friends.length - 1, 1) //tried it; didn't pass the test and also returns an array not string
 };
+
+// // //printing results to the console
+//   const person1 = {
+//     name: 'Sara',
+//     age: 30,
+//     friends: ['Bob', 'Joe', 'Sally'],
+//   };
+
+//   console.log(weAreNotFriends(person1)); //'Sally'
+//   console.log(person1.friends); //['Bob', 'Joe']
+
+//   console.log(weAreNotFriends(person1)) //'Joe'
+//   console.log(person1.friends); //['Bob']
+
+//   console.log(weAreNotFriends(person1)); //'Bob'
+//   console.log(person1.friends); //[]
+
+//   console.log(weAreNotFriends(person1)) //undefined
+//   console.log(person1.friends); //[]
 
 const listHobbies = () => {
 };
