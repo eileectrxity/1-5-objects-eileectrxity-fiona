@@ -184,8 +184,18 @@ if (team.matches.length === 0) { //originally tried to check for (team.matches[0
 // fighters.matches.shift();
 // console.log(getNextOpponent(fighters)) //null
 
-const listAllKeys = () => {
+// Question 8
+const keys = {
+  a: 'somestring',
+  b: 42,
+  c: false,
+}
+
+const listAllKeys = (object1) => {
+return Object.keys(object1);
 };
+
+console.log(listAllKeys(keys));
 
 const listAllValues = () => {
 };
