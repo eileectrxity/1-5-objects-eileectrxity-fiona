@@ -119,7 +119,17 @@ const weAreNotFriends = (person) => {
 //   console.log(weAreNotFriends(person1)) //undefined
 //   console.log(person1.friends); //[]
 
-const listHobbies = () => {
+// Question 6
+const jo = {
+  name: 'Jo',
+  age: 34,
+  hobbies: ['running', 'biking', 'baking']
+}
+
+const listHobbies = (person) => {
+  for (let i = 0; i < person.hobbies.length; i++) {
+    console.log(`${person.name} likes ${person.hobbies[i]}.`)
+  }
 };
 
 const getNextOpponent = () => {
