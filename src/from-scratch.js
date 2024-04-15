@@ -119,7 +119,12 @@ const weAreNotFriends = (person) => {
 //   console.log(weAreNotFriends(person1)) //undefined
 //   console.log(person1.friends); //[]
 
-// Question 6
+/*Question 6: a function that takes in an object , person- which is shaped like the below
+const jo = {
+  name: 'Jo',
+  age: 34,
+  hobbies: ['running', 'biking', 'baking'],
+}; */
 const jo = {
   name: 'Jo',
   age: 34,
@@ -132,8 +137,52 @@ const listHobbies = (person) => {
   }
 };
 
-const getNextOpponent = () => {
+//Question 7: a function that takes in an object team. the team object is complex with nested keys
+//getNextOpponent() should return the teamName of the first opponent in matches. it should only return the name, and not modify the array. if there is no team in the array (there will always be an array), return null. getNextOpponent(fighters); //should return 'Dunkaroos'
+
+const getNextOpponent = (team) => { //team parameter is just the placeholder for an object that we pass in the argument
+  // console.log(team.matches.length): to help me debug
+if (team.matches.length === 0) { //originally tried to check for (team.matches[0].teamName.length === 0) but the null test case was breaking this as with matches array being empty, teamName property no longer existed thus returning typeError of undefined- BOOMM!
+    return null;
+  } else return team.matches[0].teamName; //accessing the teamName key property inside of the matches key array at index 0 within the passed team object argument
 };
+
+// // //printing results to the console below
+// //nested object with nested keys
+// const fighters = {
+//   name: 'Fighters',
+//   sport: 'basketball',
+//   wins: 3,
+//   location: {
+//     city: 'Bridgeport',
+//     state: 'CT',
+//   },
+//   matches: [
+//     {
+//       teamName: 'Dunkaroos',
+//       skill: 9,
+//       wins: 12,
+//     },
+//     {
+//       teamName: 'Space Jammers',
+//       skill: 10,
+//       wins: 16,
+//     },
+//     {
+//       teamName: 'Mustangs',
+//       skill: 6,
+//       wins: 10,
+//     },
+//   ],
+// };
+
+// console.log(getNextOpponent(fighters)) //'Dunkaroos'
+// fighters.matches.shift();
+// console.log(getNextOpponent(fighters)) //'Space Jammers
+// fighters.matches.shift();
+// console.log(getNextOpponent(fighters)) //'Mustangs'
+// fighters.matches.shift();
+// console.log(getNextOpponent(fighters)) //null
 
 const listAllKeys = () => {
 };
